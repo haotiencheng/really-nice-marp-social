@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "buffer": {
+      "command": "bunx",
+      "args": ["--bun", "@buffer/mcp-server"],
+      "env": {
+        "BUFFER_ACCESS_TOKEN": "${BUFFER_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

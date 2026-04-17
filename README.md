@@ -14,13 +14,16 @@ git clone https://github.com/haotiencheng/really-nice-marp-social
 cd really-nice-marp-social
 bun install
 
-# 2. Bootstrap a post
+# 2. From inside Claude Code: first-time setup
+/init                          # checks deps, smoke-tests render, optional Buffer config
+
+# 3. Bootstrap a post (or just call /generate-slide)
 bun run new my-first-post
 
-# 3. Render
+# 4. Render
 bun run render my-first-post
 
-# 4. Open the PNGs
+# 5. Open the PNGs
 open output/my-first-post/final_slide.001.png
 ```
 
@@ -34,11 +37,17 @@ Once this repo is the current working directory (or installed via `/plugin insta
 
 | Command | What it does |
 |---------|--------------|
+| `/init` | First-time setup: dep check + render smoke test + optional Buffer config. |
 | `/generate-slide <text \| url> [--theme NAME] [--ratio 4:5\|1:1\|9:16\|16:9]` | Pick layouts, write `slide.md`, render PNGs. |
 | `/copy-style <image \| url> [name]` | Clone a reference image's color palette + mood into a new theme. |
 | `/add-branding <theme> <image-dir>` | Replace a theme's backgrounds with your own. |
+| `/publish <post_id> [--mode queue\|draft\|schedule] [--at ISO]` | Optional. Push rendered PNGs + caption to IG / Threads via Buffer MCP. |
 
 See `.claude/skills/social-post/SKILL.md` for the full pipeline spec.
+
+### Optional: Buffer publish
+
+`/publish` is gated behind `/init`. Skip the Buffer step in setup if you'd rather post manually — local rendering works without it. When enabled, setup creates a gitignored `.env` (with `BUFFER_ACCESS_TOKEN`) and copies `.mcp.json.example` to `.mcp.json` for the Buffer MCP server. Restart Claude Code after setup so the MCP server connects.
 
 ---
 

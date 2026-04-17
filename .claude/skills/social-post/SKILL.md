@@ -20,9 +20,11 @@ Swap the theme → different colors. Swap the backgrounds → different mood. La
 
 | Command | When to use |
 |---------|-------------|
+| `/init` | First-time setup. Verify deps, smoke-test the renderer, optionally configure Buffer. |
 | `/generate-slide <text \| url> [--theme NAME] [--ratio 4:5\|1:1\|9:16\|16:9]` | Produce a slide deck from content. |
 | `/copy-style <image \| url> [name]` | Clone the color palette / mood of a reference image into a new theme. |
 | `/add-branding <theme> <image-dir>` | Replace a theme's backgrounds with the user's own branded PNGs. |
+| `/publish <post_id> [--mode queue\|draft\|schedule] [--at ISO]` | **Optional.** Push rendered PNGs + caption to IG / Threads via Buffer MCP. Requires `/init` Buffer setup. |
 
 Full command specs live in `commands/*.md` alongside this file.
 
@@ -80,9 +82,11 @@ Full command specs live in `commands/*.md` alongside this file.
 .claude/skills/social-post/
 ├── SKILL.md                   # this file
 ├── commands/
+│   ├── init.md
 │   ├── generate-slide.md
 │   ├── copy-style.md
-│   └── add-branding.md
+│   ├── add-branding.md
+│   └── publish.md
 └── layouts/
     ├── cover.md
     ├── list-3.md
@@ -93,3 +97,15 @@ Full command specs live in `commands/*.md` alongside this file.
     ├── compare.md
     └── closing.md
 ```
+
+## Optional: Buffer Publish
+
+`/publish` pushes rendered decks to Instagram + Threads via the Buffer MCP server. It's gated behind `/init` so the skill stays usable without it.
+
+Setup writes:
+- `.env` — holds `BUFFER_ACCESS_TOKEN` (gitignored)
+- `.mcp.json` — registers the Buffer MCP server (template in `.mcp.json.example`)
+
+Both files are user-controlled; `/init` never overwrites existing values silently.
+
+When publishing, **always** put images in `metadata.threads.thread[0].assets`, not just top-level `assets` — Threads drops top-level assets when thread replies are present.

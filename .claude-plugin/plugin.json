@@ -24,9 +24,11 @@
     }
   ],
   "commands": [
+    { "name": "init", "path": ".claude/skills/social-post/commands/init.md" },
     { "name": "generate-slide", "path": ".claude/skills/social-post/commands/generate-slide.md" },
     { "name": "copy-style", "path": ".claude/skills/social-post/commands/copy-style.md" },
-    { "name": "add-branding", "path": ".claude/skills/social-post/commands/add-branding.md" }
+    { "name": "add-branding", "path": ".claude/skills/social-post/commands/add-branding.md" },
+    { "name": "publish", "path": ".claude/skills/social-post/commands/publish.md" }
   ],
   "requirements": {
     "claude-code": ">=1.0.0",

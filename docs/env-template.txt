@@ -1,0 +1,14 @@
+# really-nice-marp-social — environment template
+# Copy this file's contents to a new `.env` at the repo root and fill in.
+# .env is gitignored.
+
+# ─── Buffer (optional) ──────────────────────────────────────────
+# Personal access token from https://publish.buffer.com/account/apps
+# Required only if you use /publish to push to Instagram / Threads.
+BUFFER_ACCESS_TOKEN=
+
+# ─── Static image host (optional) ───────────────────────────────
+# Buffer needs public URLs for images, not local files. If you host
+# rendered PNGs on R2 / S3 / similar, set the public base URL here.
+# /publish will warn before uploading anywhere you haven't configured.
+STATIC_HOST_BASE_URL=
