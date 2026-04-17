@@ -1,0 +1,47 @@
+/* @theme rnms-_template */
+@import "default";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Noto+Sans+TC:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap");
+
+/* Copy this file to themes/<your-name>/theme.css and tweak the vars. */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-text-strong: #000000;
+  --color-primary: #0066ff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f5f5f5;
+  --color-outline: #111111;
+  --color-accent: #ff3366;
+
+  --font-heading: "Plus Jakarta Sans", "Noto Sans TC", sans-serif;
+  --font-body: "Plus Jakarta Sans", "Noto Sans TC", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --outline-width: 3px;
+  --shadow-offset: 12px;
+  --radius-lg: 24px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+}
+
+* { box-sizing: border-box; }
+
+section {
+  padding: 0;
+  margin: 0;
+  background-image: url("backgrounds/bg-body.png");
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.cover { background-image: url("backgrounds/bg-cover.png"); }
+section.quote { background-image: url("backgrounds/bg-quote.png"); }
+section.stat { background-image: url("backgrounds/bg-stat.png"); }
+section.closing { background-image: url("backgrounds/bg-closing.png"); }

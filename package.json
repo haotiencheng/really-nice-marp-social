@@ -1,0 +1,27 @@
+{
+  "name": "really-nice-marp-social",
+  "version": "0.1.0",
+  "description": "Claude Code skill that turns text or URLs into on-brand social slide decks using Marp + swappable backgrounds + shared layouts.",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "render": "bun run scripts/render-slides.ts",
+    "new": "bash scripts/new-post.sh"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-skill",
+    "marp",
+    "social-media",
+    "instagram",
+    "threads",
+    "slides"
+  ],
+  "license": "MIT"
+}

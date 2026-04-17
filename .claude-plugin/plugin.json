@@ -1,0 +1,36 @@
+{
+  "name": "really-nice-marp-social",
+  "version": "0.1.0",
+  "description": "Turn text or a URL into on-brand social slide decks (IG / Threads / LinkedIn) with Marp + swappable backgrounds + shared layouts.",
+  "author": {
+    "name": "haotiencheng",
+    "email": "haotiencheng1217@gmail.com"
+  },
+  "homepage": "https://github.com/haotiencheng/really-nice-marp-social",
+  "repository": "https://github.com/haotiencheng/really-nice-marp-social",
+  "license": "MIT",
+  "keywords": [
+    "slides",
+    "marp",
+    "social-media",
+    "instagram",
+    "threads",
+    "design"
+  ],
+  "skills": [
+    {
+      "name": "social-post",
+      "path": ".claude/skills/social-post"
+    }
+  ],
+  "commands": [
+    { "name": "generate-slide", "path": ".claude/skills/social-post/commands/generate-slide.md" },
+    { "name": "copy-style", "path": ".claude/skills/social-post/commands/copy-style.md" },
+    { "name": "add-branding", "path": ".claude/skills/social-post/commands/add-branding.md" }
+  ],
+  "requirements": {
+    "claude-code": ">=1.0.0",
+    "runtime": "bun",
+    "external": ["@marp-team/marp-cli"]
+  }
+}

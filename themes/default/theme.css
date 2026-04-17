@@ -1,0 +1,56 @@
+/* @theme rnms-default */
+@import "default";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Noto+Sans+TC:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap");
+
+/* Injected by render-slides.ts based on theme.config.json ratio:
+ * @size <w>x<h> <w>px <h>px;
+ * section { width: <w>px; height: <h>px; }
+ */
+
+:root {
+  /* Colors — layouts read these vars, not literals */
+  --color-bg: #f2ede2;
+  --color-text: #2e2e2e;
+  --color-text-strong: #1b1b1b;
+  --color-primary: #1b5068;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f2ede2;
+  --color-outline: #2e2e2e;
+  --color-accent: #d4856a;
+
+  /* Typography */
+  --font-heading: "Plus Jakarta Sans", "Noto Sans TC", sans-serif;
+  --font-body: "Plus Jakarta Sans", "Noto Sans TC", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Outline + shadow token (grid-card design language) */
+  --outline-width: 3px;
+  --shadow-offset: 12px;
+  --radius-lg: 24px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+  background-image: url("backgrounds/bg-body.png");
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Per-layout background overrides */
+section.cover { background-image: url("backgrounds/bg-cover.png"); }
+section.quote { background-image: url("backgrounds/bg-quote.png"); }
+section.stat { background-image: url("backgrounds/bg-stat.png"); }
+section.closing { background-image: url("backgrounds/bg-closing.png"); }

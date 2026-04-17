@@ -1,0 +1,13 @@
+{
+  "name": "default",
+  "author": "really-nice-marp-social",
+  "ratio": "4:5",
+  "description": "Cream grid background with teal accents and bold outlined cards.",
+  "backgrounds": {
+    "cover": "bg-cover.png",
+    "body": "bg-body.png",
+    "quote": "bg-quote.png",
+    "stat": "bg-stat.png",
+    "closing": "bg-closing.png"
+  }
+}

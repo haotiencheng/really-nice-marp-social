@@ -1,0 +1,16 @@
+node_modules/
+bun.lockb
+bun.lock
+.DS_Store
+.env
+.env.local
+
+# Rendered output — except curated examples
+output/
+!output/.gitkeep
+
+# Per-theme backup dirs created by /add-branding
+themes/*/backgrounds/.backup-*/
+
+# Merged css scratch files
+**/.theme.merged.css
