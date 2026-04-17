@@ -1,0 +1,9 @@
+{
+  "name": "notebook",
+  "author": "really-nice-marp-social",
+  "ratio": "4:5",
+  "description": "Grid-notes paper background with outlined white cards and tilted floating cards on the cover.",
+  "backgrounds": {
+    "body": "bg-body.png"
+  }
+}

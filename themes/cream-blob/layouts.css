@@ -1,0 +1,5 @@
+/* cream-blob ships its layouts inside theme.css.
+ * This empty file prevents render-slides.ts from falling back to
+ * themes/default/layouts.css, which targets a different design language
+ * (outlined cards with hard shadows) and would conflict with .card / .col.
+ */

@@ -1,0 +1,5 @@
+/* editorial ships its layouts inside theme.css.
+ * This empty file prevents render-slides.ts from falling back to
+ * themes/default/layouts.css, whose outlined-card + grid-paper rules
+ * would conflict with this theme's flat dark design language.
+ */

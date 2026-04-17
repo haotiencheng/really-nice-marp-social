@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" fill="none" stroke="#cbb993" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- Speech bubble (question from the gun/attacker) -->
+  <g>
+    <path d="M 40 20 L 420 20 Q 445 20 445 45 L 445 125 Q 445 150 420 150 L 150 150 L 115 200 L 135 150 L 40 150 Q 15 150 15 125 L 15 45 Q 15 20 40 20 Z" fill="#0f0f0f"/>
+    <text x="230" y="100" fill="#cbb993" stroke="none" font-family="Plus Jakarta Sans, Noto Sans TC, sans-serif" font-size="34" font-weight="700" text-anchor="middle">50m... drive or walk?!</text>
+  </g>
+
+  <!-- Foam cannon bottle on top -->
+  <rect x="95" y="225" width="48" height="48" rx="4"/>
+  <rect x="107" y="215" width="24" height="12" rx="2"/>
+  <line x1="88" y1="242" x2="150" y2="242"/>
+  <line x1="119" y1="273" x2="119" y2="290"/>
+
+  <!-- Gun body -->
+  <rect x="30" y="290" width="160" height="52" rx="10"/>
+
+  <!-- Pistol grip -->
+  <path d="M 62 342 L 50 412 L 122 412 L 112 342"/>
+  <path d="M 90 352 L 85 380 L 102 380"/>
+
+  <!-- Nozzle -->
+  <polygon points="190,300 254,288 254,330 190,320"/>
+  <rect x="254" y="302" width="28" height="16" rx="3" fill="#cbb993" fill-opacity="0.2"/>
+
+  <!-- Spray cone -->
+  <g stroke-width="3">
+    <line x1="290" y1="308" x2="425" y2="272"/>
+    <line x1="295" y1="312" x2="455" y2="312"/>
+    <line x1="290" y1="320" x2="425" y2="358"/>
+    <line x1="305" y1="290" x2="415" y2="238"/>
+    <line x1="305" y1="340" x2="415" y2="388"/>
+  </g>
+
+  <!-- Droplets -->
+  <g fill="#cbb993" stroke="none">
+    <circle cx="470" cy="268" r="4"/>
+    <circle cx="485" cy="315" r="5"/>
+    <circle cx="465" cy="365" r="3"/>
+    <circle cx="478" cy="234" r="3"/>
+    <circle cx="475" cy="392" r="4"/>
+  </g>
+
+  <!-- Claude mark drawn separately as overlay .claude-mark img -->
+</svg>

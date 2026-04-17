@@ -1,0 +1,9 @@
+{
+  "name": "cream-blob",
+  "author": "really-nice-marp-social",
+  "ratio": "4:5",
+  "description": "Cream background with soft organic blob shapes, dark teal content card, Material Symbols icons, and a footer-bar.",
+  "backgrounds": {
+    "body": "bg-body.png"
+  }
+}

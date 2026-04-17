@@ -68,13 +68,16 @@ This lets someone fork the repo, redesign just the backgrounds in Canva, and get
 
 ---
 
-## Layouts (v1)
+## Layouts
 
-Shipped in `.claude/skills/social-post/layouts/`:
+Shipped in `.claude/skills/social-post/layouts/`. Layouts are grouped by the theme whose CSS defines their classes — a theme only has to support the layouts it opts into.
+
+### Outlined card (design language — `default`, `notebook`)
 
 | Layout | Use for |
 |--------|---------|
 | `cover` | Hook title + one-line lead |
+| `cover-float` | Hook + floating tilted cards (`notebook` only) |
 | `list-3` | 3 bullet takeaways |
 | `list-5` | 5 bullet takeaways |
 | `quote` | Large pull quote |
@@ -83,16 +86,45 @@ Shipped in `.claude/skills/social-post/layouts/`:
 | `compare` | Before/after or mode comparison |
 | `closing` | CTA / sign-off / QR |
 
+### Icon-badge deck (design language — `cream-blob`)
+
+| Layout | Use for |
+|--------|---------|
+| `grid-2x2` | 4 icon + title + blurb cards |
+| `numbered-stack` | 2–3 framed sections with big numerals |
+| `timeline` | Dated milestones, application process |
+| `two-col` | Required vs preferred, before/after bullets |
+| `icon-rows` | 3–4 benefits or feature rows |
+| `info-grid` | 4 key facts (label → value) |
+| `cta-cards` | 2–4 open positions / CTAs |
+| `qr-duo` | Two QR codes side-by-side (typically last slide) |
+
+### Editorial / magazine (design language — `editorial`)
+
+| Layout | Use for |
+|--------|---------|
+| `ed-cover` | Magazine-style cover — eyebrow meta + oversized hook + squiggle + lead |
+| `page` | Content page — circle page-marker, squiggle, `page-foot` nav |
+| `prose` | Flowing paragraph body with big-stat watermark |
+| `compare` | Two screenshots side-by-side with ✓/✕ tags |
+| `rows` | Key → value rows (with optional inline caption) |
+| `stats` | Big numeral + label/description rows |
+| `lst` | Numbered editorial list |
+| `sidenote` | Compact key/value notes under the prose |
+
 Every layout `.md` has a copy-pasteable example + when-to-use notes.
 
 ---
 
 ## Themes
 
-| Theme | Look | Default ratio |
-|-------|------|---------------|
-| `default` | Cream grid background, teal + outlined cards, `Plus Jakarta Sans` | 4:5 |
-| `_template` | Empty starter — copy to scaffold your own | 4:5 |
+| Theme | Look | Default ratio | Example post |
+|-------|------|---------------|---------------|
+| `default` | Cream grid background, teal + outlined cards, `Plus Jakarta Sans` | 4:5 | — |
+| `notebook` | Grid-notes paper, outlined white cards, floating tilted cards on the cover | 4:5 | [`examples/manage_skills/`](examples/manage_skills/) |
+| `cream-blob` | Cream background with soft organic blob shapes + dark teal content card, Material Symbols icons, footer bar | 4:5 | [`examples/disney_intern/`](examples/disney_intern/) |
+| `editorial` | Flat dark canvas + warm linen accent, squiggle underline, circle page markers, magazine spread feel | 4:5 | [`examples/car_wash_test/`](examples/car_wash_test/) |
+| `_template` | Empty starter — copy to scaffold your own | 4:5 | — |
 
 Make your own:
 
